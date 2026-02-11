@@ -147,7 +147,7 @@ To start building workflows in Kestra, we need to understand a number of concept
 While there are more concepts used for building powerful workflows, these are the ones we're going to use to build our data pipelines.
 
 The flow [`01_hello_world.yaml`](flows/01_hello_world.yaml) showcases all of these concepts inside of one workflow:
-- The flow has 5 tasks: 2 log tasks and a sleep task
+- The flow has 5 tasks: 3 log tasks and a sleep task
 - The flow takes an input called `name`.
 - There is a variable that takes the `name` input to generate a full welcome message.
 - An output is generated from the return task and is logged in a later log task.
@@ -304,6 +304,10 @@ First, adjust the following flow [`06_gcp_kv.yaml`](flows/06_gcp_kv.yaml) to inc
 #### Create GCP Resources
 
 If you haven't already created the GCS bucket and BigQuery dataset in the first week of the course, you can use this flow to create them: [`07_gcp_setup.yaml`](flows/07_gcp_setup.yaml).
+
+> [!WARNING]  
+> The `GCP_CREDS` service account contains sensitive information. Ensure you keep it secure and do not commit it to Git. Keep it as secure as your passwords.
+
 
 #### Videos
 
